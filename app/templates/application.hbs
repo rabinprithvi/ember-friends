@@ -1,3 +1,25 @@
-<h2 id="title">Welcome to Ember</h2>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed"
+      data-toggle="collapse" data-target="#menu-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 
-{{outlet}}
+    </div>
+
+    <div class="collapse navbar-collapse" id="menu-collapse">
+      <ul class="nav navbar-nav">
+        <li>Home</li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  {{outlet}}
+</div>

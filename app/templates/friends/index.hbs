@@ -1,0 +1,7 @@
+<h5>Friends Index</h5>
+
+<ul class="list-group">
+  {{#each model as |friend|}}
+    <li class="list-group-item">{{friend.firstName}} {{friend.lastName}}</li>
+  {{/each}}
+</ul>
