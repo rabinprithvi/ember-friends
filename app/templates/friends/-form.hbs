@@ -1,4 +1,5 @@
 <form  {{action "save" on="submit"}} class="form-group">
+  <h2>{{errorMessage}}</h2>
   <p>
     <label>
       First Name: {{input class="form-control" value=model.firstName}}
