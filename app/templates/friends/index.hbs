@@ -1,7 +1,8 @@
 <h5>Friends Index</h5>
+<h6>Total Friends: {{model.length}}</h6>
 
 <ul class="list-group">
   {{#each model as |friend|}}
-    <li class="list-group-item">{{friend.firstName}} {{friend.lastName}}</li>
+    <li class="list-group-item">{{friend.id}} - {{friend.firstName}} {{friend.lastName}}</li>
   {{/each}}
 </ul>
