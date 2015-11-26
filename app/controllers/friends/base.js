@@ -24,9 +24,6 @@ export default Ember.Controller.extend({
           this.set('errorMessage', 'You have to fill all the fields.')
         }
         return false;
-      },
-      cancel() {
-        return true;
       }
   }
 });
