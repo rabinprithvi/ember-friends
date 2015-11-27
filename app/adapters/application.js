@@ -3,5 +3,5 @@ import config from '../config/environment';
 
 export default ActiveModeAdapter.extend({
 //	host: config.host,
-  namespace: 'api'
+  namespace: 'api/v2'
 });
