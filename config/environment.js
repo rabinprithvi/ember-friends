@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    host: 'http://api.ember-cli-101.com',
+    //host: 'http://api.ember-cli-101.com',
     modulePrefix: 'user-crud',
     environment: environment,
     baseURL: '/',
