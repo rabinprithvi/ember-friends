@@ -6,9 +6,34 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
   });
-  app.import('bower_components/bootstrap/dist/css/bootstrap.css');
-  app.import('bower_components/bootstrap/dist/css/bootstrap-theme.css');
-  app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+
+  //For Bootstrap, uncomment these 3 lines
+  //app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+  //app.import('bower_components/bootstrap/dist/css/bootstrap-theme.css');
+  //app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+
+  //fontello
+  app.import('vendor/fontello/fontello.css');
+  app.import('vendor/fontello/font/fontello.ttf', {
+    destDir: 'font'
+  });
+  app.import('vendor/fontello/font/fontello.eot', {
+    destDir: 'font'
+  });
+  app.import('vendor/fontello/font/fontello.svg', {
+    destDir: 'font'
+  });
+  app.import('vendor/fontello/font/fontello.woff', {
+    destDir: 'font'
+  });
+
+  //Pincic
+  app.import('bower_components/picnic/releases/plugins.min.css');
+  app.import('bower_components/picnic/releases/picnic.min.css');
+
+
+
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

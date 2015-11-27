@@ -1,27 +1,18 @@
-<h6>Total Friends: {{model.length}}</h6>
-
-<table class="table table-hover">
+<table class="primary">
   <thead>
+    <tr>
+      <th>Name</th>
+      <th>Articles</th>
+      <th></th>
+    </tr>
   </thead>
   <tbody>
     {{#each model as |friend|}}
       <tr>
-        <td>
-          {{friend.fullName}}
-        </td>
-        <td>
-          {{link-to 'Show' 'friends.show' friend}}
-        </td>
-        <td>
-          {{link-to 'Edit' 'friends.edit' friend}}
-        </td>
-        <td>
-          <a href="#" {{action 'delete' friend}}>Delete</a>
-        </td>
+        <td>{{link-to friend.fullName "friends.show" friend}}</td>
+        <td>{{friend.totalArticles}}</td>
+        <td><a href="#" {{action "delete" friend}}>delete</a></td>
       </tr>
     {{/each}}
   </tbody>
-
 </table>
-
-{{link-to 'Create Friend' 'friends.new' class="btn btn-primary"}}
