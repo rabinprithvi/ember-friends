@@ -6,21 +6,21 @@ export default Ember.Route.extend({
         friend: this.modelFor('friends/show')
       });
     },
-    resetController(controller, isExiting) {
-      if (isExiting) {
-        var model = controller.get('model');
-        model.destroyRecord();
-      }
-    },
     actions: {
       save() {
-          var model = this.modelFor('aritcles/new');
+          var model = this.controller.get('model');;
           model.save().then(() => {
             this.transitionTo('articles');
           });
         },
         cancel() {
+          var model = this.controller.get('model');
+          model.rollbackAttributes();
           this.transitionTo('articles');
+        },
+        willTransition(){
+          var model = this.controller.get('model');
+          model.rollbackAttributes();
         }
     }
 });
