@@ -5,6 +5,15 @@ export default Ember.Route.extend({
     return this.store.createRecord('friend');
   },
 
+  resetController(controller, isExiting){
+    if(isExiting){
+      var model = controller.get('model');
+      if(model.get('isNew')){
+        model.destroyRecord();
+      }
+    }
+  },
+
   actions: {
     save() {
         console.log('+-- save action bubbled up to friends new route');
